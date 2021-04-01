@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+function check(){
+	if(document.form.id.value==""){
+		alert("아이디을 입력하세요");
+	document.form.id.focus();
+		}
+	else if(document.form.name.value==""){
+		alert("이름을 입력하세요");
+	document.form.name.focus();
+		}
+	else if(document.form.password.value==""){
+		alert("비밀번호를 입력하세요");
+	document.form.name.focus();
+		}
+	else if(document.form.rpassword.value==""){
+		alert("비밀번호확인을 입력하세요");
+	document.form.repassword.focus();
+		}
+	else{
+		document.form.submit();
+	}
+	
+}
+</script>
+<style>
+	haeder{
+	width: 100%;
+	height: 15%;
+	}
+	
+	header h1{
+	text-align: left;
+	}
+	form{
+	text-align:right;
+	}
+	nav{
+	background-color: cyan;
+	width:100%;
+	height:5%;
+	}
+	aside{
+		float: left;
+		width: 70%;
+        height: 80%;
+        padding: 0%;
+        margin: 0%;
+	}
+	section{
+	 width: 30%;
+     height: 80%;
+	float: left;
+	}
+	a1{
+	text-align:left;
+	}
+	footer{
+	width: 100%;
+        height: 30%;
+	background-color: gray;
+	clear: both;
+	}
+	*{
+	 padding: 0%;
+        margin: 0%;
+	}
+	a2{
+	align: right;
+	}
+	ul{
+		list-style:none;
+		
+	}
+	ul li{
+		display: inline;
+	}
+	ul li a{
+	text-decoration:none;
+	}
+</style>
+</head>
+<body>
+<header>
+<h1>카센터(붕붕이 나라)</h1>
+<form name="frm01" method="post" action="process1.jsp">
+	회원id : <input type="text" name="name1">
+    비밀번호 : <input type="password" name="pass1">
+    <a href="member.html">회원가입</a>
+</form>
+</header>
+<nav id="li">
+ <ul>
+    <li><a href="#">회사소개</a></li>
+    <li><a href="#">부품정보</a></li>
+    <li><a href="#">고객정보</a></li>
+    <li><a href="#">견적관리</a></li>
+    <li><a href="#">정비이력</a></li>
+    <li><a href="#">게시판</a></li>
+  </ul>
+</nav>
+<hr>
+<aside>
+	<h1 align="center">고객관리</h1>
+<form name="form" method="post" action="process.jsp">
+
+<table border="1" width="800" height="400" align="center">
+<tr>
+<td align="center"  id=a1><b>아이디</b></td>
+<td align="lef"><input type="text" name="id"><input type="button" name="중복체크" value="중복체크"></td>
+</tr>
+<tr>
+<b><td align="center" id=a1><b>이름</b></td></b>
+<td><input type="text" name="name"></td>
+</tr>
+<tr>
+<b><td align="center" id=a1><b>비밀번호</b></td></b>
+<td><input type="password" name="password"></td>
+</tr>
+<tr>
+<td align="center" id=a1><b>비밀번호 확인</b></td>
+<td><input type="password" name="rpassword"></td>
+</tr>
+<tr>
+<td align="center" id=a1><b>성별</b></td>
+<td><input id="man" type="radio" name="gender" value="m">
+	<label for="man">남</label>
+	<input id="woman" type="radio" name="gender" value="w">
+	<label for="woman">여</label>
+</tr>
+<tr>
+<td align="center" id=a1><b>이메일</b></td>
+<td>
+<input type="text" name="email"> @
+<select>
+<option>naver.com</option>
+<option>daum.net</option>
+<option>gmail.com</option>
+<option>nate.com</option>
+</select></td>
+</tr>
+<tr>
+<td align="center" id=a1><b>핸드폰</b></td>
+<td>
+<select name="phone1">
+<option>010</option>
+<option>011</option>
+<option>017</option>
+<option>019</option>
+</select>-
+<input type="text" name="phone2">-<input type="text" name="phone3">
+</td>
+</tr>
+<tr>
+<td align="center" id=a1><b>전화번호</b></td>
+<td><input type="text" name="call1">-<input type="text" name="call2"></td>
+</tr>
+<tr>
+<td align="center" id=a1><b>주소</b></td>
+<td><input type="text" name="adress"></td>
+</tr>
+<tr>
+<td align="center" id=a1><b>차량번호</b></td>
+<td><input type="text" name="carnumber"></td>
+</tr>
+<tr>
+<td align="center" id=a1><b>차량종류</b></td>
+<td><input type="text" name="car"></td>
+</tr>
+<tr><td colspan="2" align="center"><input type="button" value="회원가입" onclick="javascript:check()">
+<input type="reset" value="다시작성"></td></tr></table>
+</form>
+</aside>
+<section>
+	<input type="button" value="고객등록" onclick="javascript:check()"><br>
+	<input type="button" value="정비등록" onclick="javascript:check()"><br>
+	<input type="button" value="부품등록" onclick="javascript:check()"><br>
+	<input type="button" value="현재위치" onclick="javascript:check()">
+</section>
+<footer>
+<a1>Copyright (c) 2018 yangjung All rights reserved</a1>
+<a2><img src="images/facebook.gif">
+<img src="images/twitter.gif">
+<img src="images/googleplus-icon.png" width=70 height=70>
+</a2>
+</footer>
+
+</body>
+</html>

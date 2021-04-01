@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	haeder{
+	width: 100%;
+	height: 15%;
+	}
+	
+	header h1{
+	text-align: left;
+	}
+	form{
+	text-align:right;
+	}
+	nav{
+	background-color: cyan;
+	width:100%;
+	height:5%;
+	}
+	aside{
+		float: left;
+		width: 70%;
+        height: 80%;
+        padding: 0%;
+        margin: 0%;
+	}
+	section{
+	 width: 30%;
+     height: 80%;
+	float: left;
+	}
+	a1{
+	text-align:left;
+	}
+	footer{
+	width: 100%;
+        height: 30%;
+	background-color: gray;
+	clear: both;
+	}
+	*{
+	 padding: 0%;
+        margin: 0%;
+	}
+	a2{
+	align: right;
+	}
+	ul{
+		list-style:none;
+		
+	}
+	ul li{
+		display: inline;
+	}
+	ul li a{
+	text-decoration:none;
+	}
+</style>
+</head>
+<body>
+<header>
+<h1>카센터(붕붕이 나라)</h1>
+	<% String checkName = "";
+		checkName = (String) session.getAttribute("s_Name");
+		if(checkName==null){
+	
+	%>
+<form name="frm01" method="post" action="process.jsp">
+	회원id : <input type="text" name="name">
+    비밀번호 : <input type="password" name="pass">
+    <a href="member.html">회원가입</a>
+</form>
+	<%} else{ session.setMaxInactiveInterval(500);%>
+		<%= checkName %> 님 환영합니다.
+			<ㅁ ㅗㄱㄷㄹ=
+	<%} %>
+</header>
+<nav id="li">
+ <ul>
+    <li><a href="#">회사소개</a></li>
+    <li><a href="#">부품정보</a></li>
+    <li><a href="#">고객정보</a></li>
+    <li><a href="#">견적관리</a></li>
+    <li><a href="#">정비이력</a></li>
+    <li><a href="#">게시판</a></li>
+  </ul>
+</nav>
+<hr>
+<aside><img src="images/logo.jpg" width=1000 height=400></aside>
+<section>
+	<input type="button" value="고객등록" onclick="javascript:check()"><br>
+	<input type="button" value="정비등록" onclick="javascript:check()"><br>
+	<input type="button" value="부품등록" onclick="javascript:check()"><br>
+	<input type="button" value="현재위치" onclick="javascript:check()">
+</section>
+<footer>
+<a1>Copyright (c) 2018 yangjung All rights reserved</a1>
+<a2><img src="images/facebook.gif">
+<img src="images/twitter.gif">
+<img src="images/googleplus-icon.png" width=70 height=70>
+</a2>
+</footer>
+
+</body>
+</html>
