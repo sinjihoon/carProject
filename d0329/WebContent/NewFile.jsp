@@ -18,7 +18,9 @@
 		out.println("<html><head>title>aaa</title></head>");
 		out.println("<body><h1>java server pages<</h1>");
 		out.println("</body></html>");
+		
 	}
+	int hap=0;
 %>
 
 <%= maketLower("hello world") %>
